@@ -1,0 +1,27 @@
+extends ../layout
+
+block content 
+    .row
+        .col-sm-8
+            h1 Product Details
+        .col-sm-4
+    table.table
+        thead 
+            tr 
+                th Name 
+                th Price
+                th Description 
+                th Rating
+        tbody 
+            each product in products   
+                tr          
+                    td=product.name 
+                    td=product.price
+                    td=product.description                    
+                    
+                    td  
+                        span.fa.fa-star.checked 
+                        span.fa.fa-star.checked 
+                        span.fa.fa-star.checked 
+                        span.fa.fa-star 
+                        span.fa.fa-star
